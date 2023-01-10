@@ -3,7 +3,10 @@ export class Timer {
   private startMinutes: number | undefined
   private startSeconds: number | undefined
 
-  constructor(public minutes: number, public seconds: number) {}
+  constructor(public minutes: number, public seconds: number) {
+    this.startMinutes = minutes
+    this.startSeconds = seconds
+  }
 
   minusSeconds() {
     if (this.seconds === 0) {
@@ -19,9 +22,6 @@ export class Timer {
   }
 
   start() {
-    this.startMinutes = this.minutes
-    this.startSeconds = this.seconds
-
     clearInterval(this.interval)
 
     this.interval = setInterval(() => {
