@@ -1,4 +1,4 @@
-import participants from '../db/participants.json' assert { type: 'json' }
+import { participants } from '../db/participants.js'
 
 export const getParticipants = () => {
   return participants
