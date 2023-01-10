@@ -11,7 +11,7 @@ const app = express()
 dotenv.config()
 
 const publicDir = resolve('src', 'public')
-const port = process.env.VITE_PORT
+const port = process.env.PORT
 const minutes = 2
 const seconds = 0
 const timer = new Timer(minutes, seconds)
